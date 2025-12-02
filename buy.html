@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buy Carbon Bonds — CarbonBond</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="container"><a href="index.html" class="brand">Carbon<span>Bond</span></a>
+    <nav class="nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="banks.html">Banks</a><a href="dashboard.html">Dashboard</a><a href="buy.html" class="cta">Buy Bonds</a></nav></div></header>
+
+  <main class="container">
+    <h1>Buy Carbon Bonds</h1>
+    <p class="lead">Select a bank and a project to contribute. This sample page demonstrates the flow and generates a demo bond preview (static).</p>
+
+    <form class="card form-grid" onsubmit="return false;">
+      <label>Choose Bank
+        <select>
+          <option>GreenTrust Bank</option>
+          <option>CarbonBridge Finance</option>
+          <option>EcoBank Intl.</option>
+        </select>
+      </label>
+
+      <label>Choose Project
+        <select>
+          <option>Mangrove Restoration — Sundarbans</option>
+          <option>Rajshahi Solar Farm</option>
+          <option>Sylhet Agroforestry</option>
+        </select>
+      </label>
+
+      <label>Amount (USD)
+        <input type="number" placeholder="Enter USD amount" />
+      </label>
+
+      <div class="row">
+        <a href="dashboard.html" class="btn">Confirm & Generate Demo Bond</a>
+        <a href="index.html" class="btn btn-outline">Cancel</a>
+      </div>
+    </form>
+
+    <section class="card demo-bond mt-6">
+      <h3>Carbon Bond Preview (Demo) </h3>
+      <div class="demo-row"><strong>Bank:</strong> GreenTrust Bank</div>
+      <div class="demo-row"><strong>Project:</strong> Mangrove Restoration — Sundarbans</div>
+      <div class="demo-row"><strong>Amount:</strong> $1,000</div>
+      <div class="demo-note">This is a demo bond certificate for showcase purposes.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container">© 2025 CarbonBond — Demo</div></footer>
+</body>
+</html>

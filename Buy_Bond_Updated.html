@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Buy Carbon Bonds — CarbonBond</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><div class="container"><a href="index.html" class="brand">Carbon<span>Bond</span></a>
+<nav class="nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="banks.html">Banks</a><a href="dashboard.html">Dashboard</a><a href="Buy_Bond_Updated.html" class="cta">Buy Bonds Updated</a></nav></div></header>
+
+
+<main class="container">
+<h1>Buy Carbon Bonds</h1>
+<p class="lead">
+    <br> Select a bank from the options </br>
+    <br> Select a Project you want to contribute to from the options </br>
+    <br> Please enter the amount of Contribution. </br>
+</p>
+
+
+<form class="card form-grid" onsubmit="return false;">
+
+
+<div class="form-section">
+<label>Choose Bank
+<select>
+<option value="GreenTrust Bank">GreenTrust Bank</option>
+<option value="CarbonBridge Finance">CarbonBridge Finance</option>
+<option value="EcoBank Intl.">EcoBank Intl.</option>
+</select>
+</label>
+
+
+<label>Choose Project
+<select>
+<option value="Mangrove Restoration — Sundarbans">Mangrove Restoration — Sundarbans</option>
+<option value="Rajshahi Solar Farm">Rajshahi Solar Farm</option>
+<option value="Sylhet Agroforestry">Sylhet Agroforestry</option>
+</select>
+</label>
+
+
+<label>Amount (USD)
+<select>
+<option value="1000">$1000</option>
+<option value="1500">$1500</option>
+<option value="2000">$2000</option>
+</select>
+</label>
+</div>
+
+
+<div class="form-actions row">
+<br><button type="button" class="btn" onclick="generateBond()">Generate Demo Bond</button>
+<a href="index.html" class="btn btn-outline">Cancel</a></br>
+</div>
+</form>
+
+
+<section class="card demo-bond mt-6" id="bondPreview" style="display:none;">
+<h3>Carbon Bond Preview (Demo)</h3>
+<div class="demo-row"><strong>Bank:</strong> <span id="previewBank"></span></div>
+<div class="demo-row"><strong>Project:</strong> <span id="previewProject"></span></div>
+<div class="demo-row"><strong>Amount:</strong> $<span id="previewAmount"></span></div>
+<div class="demo-note">This is a demo bond certificate for showcase purposes.</div>
+</section>
+
+<section class="card demo-bond mt-6">
+      <h3>Carbon Bond Preview (Demo) </h3>
+      <div class="demo-row"><strong>Bank:</strong> GreenTrust Bank</div>
+      <div class="demo-row"><strong>Project:</strong> Mangrove Restoration — Sundarbans</div>
+      <div class="demo-row"><strong>Amount:</strong> $1,000</div>
+      <div class="demo-note">This is a demo bond certificate for showcase purposes.</div>
+      <img id="SampleBond" src="Sample_Bond.png" alt="Bond Certificate" style="width:100%; margin-top:20px; border-radius:10px;">
+    </section>
+
+
+
+</main>
+
+
+<footer class="site-footer"><div class="container">© 2025 CarbonBond - TraderX - All Rights Reserved by Yousuf Hossain Shafeen</div></footer>
+
+
+<script>
+function generateBond() {
+const bank = document.querySelector('select:nth-of-type(1)').value;
+const project = document.querySelector('select:nth-of-type(2)').value;
+const amount = document.querySelector('input[type=number]').value;
+
+
+document.getElementById('previewBank').textContent = bank;
+document.getElementById('previewProject').textContent = project;
+document.getElementById('previewAmount').textContent = amount || '0';
+
+
+document.getElementById('bondPreview').style.display = 'block';
+}
+</script>
+</body>
+</html>
